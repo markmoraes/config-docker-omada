@@ -17,5 +17,6 @@ services:
       - HTTPSPORT=8043
     volumes:
       - /var/log/omada:/omada/logs
-      - /var/omada/data:/omada/data
+      - /var/lib/omada/data:/omada/data
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
