@@ -1,0 +1,8 @@
+#!/bin/sh
+    docker run -d --restart unless-stopped \
+    -p 8043:8043/tcp \
+    -p 27001:27001/udp -p 27002:27002/tcp \
+    -p 29810:29810/udp -p 29811:29811/tcp -p 29812:29812/tcp -p 29813:29813/tcp \
+    -v /var/log/omada:/omada/logs -v /var/omada/data:/omada/data 
+    -v /etc/timezone:/etc/timezone:ro \
+    qdm12/omada
